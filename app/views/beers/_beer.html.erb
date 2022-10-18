@@ -14,5 +14,12 @@
     <%brewery = Brewery.find_by id: beer.brewery_id %>
     <%= brewery.name %>
   </p>
+  <p>
+    <%if beer.ratings.empty? %>
+      Beer has not yet been rated
+    <% else %>  
+      <%= "Beer has #{beer.ratings.count} ratings with an average of #{beer.average_rating(beer)}"%>
+    <%end%>
+  </p>
 
 </div>
