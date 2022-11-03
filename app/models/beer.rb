@@ -1,15 +1,9 @@
 class Beer < ApplicationRecord
     belongs_to :brewery
-    has_many :ratings
+    has_many :ratings, dependent: :destroy
+    include RatingAverage
 
-    def average_rating(beer)
-        sum = 0
-        count = 0 
-        beer.ratings.each do |rating|
-            sum += rating.score
-            count += 1
-        end
-        average = sum/count
-        average.to_f
+    def to_s
+        "#{name}, #{brewery.name}"
     end
 end
