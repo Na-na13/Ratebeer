@@ -64,6 +64,6 @@ describe "Rating" do
     #end
     #within rating2 do
     #  click_button("delete", :match => :first)
-    end
+    #end
   end
 end
