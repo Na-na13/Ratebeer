@@ -34,6 +34,8 @@ jobs:
         with:
           bundler-cache: true
       # Add or replace test runners here
+      - name: Install gems
+        run: bundle install
       - name: Run tests
         run: bundle exec rspec
 
