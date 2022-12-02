@@ -35,7 +35,7 @@ jobs:
           bundler-cache: true
       # Add or replace test runners here
       - name: Run tests
-        run: bin/rake
+        run: bunble exec rspec
 
   lint:
     runs-on: ubuntu-latest
@@ -48,4 +48,4 @@ jobs:
           bundler-cache: true
       # Add or replace any other lints here
       - name: Lint Ruby files
-        run: bin/rubocop --parallel
+        run: rubocop --parallel
