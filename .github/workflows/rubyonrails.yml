@@ -35,7 +35,7 @@ jobs:
           bundler-cache: true
       # Add or replace test runners here
       - name: Run tests
-        run: bunble exec rspec
+        run: bundle exec rspec
 
   lint:
     runs-on: ubuntu-latest
