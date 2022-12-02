@@ -30,11 +30,11 @@ class MembershipsController < ApplicationController
   def create
     @membership = Membership.new(membership_params)
     @beer_clubs = BeerClub.all
-    @user = current_user
+    # @user = current_user
     @membership.user_id = @user.id
     @beer_club = BeerClub.find_by id: @membership.beer_club_id
 
-    if @beer_club.members.include? @user
+    if @beer_club.members.include? current_user
       redirect_to new_membership_path, notice: "You are already member of #{@beer_club}"
       return
     end
@@ -42,10 +42,8 @@ class MembershipsController < ApplicationController
     respond_to do |format|
       if @membership.save
         format.html { redirect_to beer_club_url(@beer_club), notice: "You are now member of #{@beer_club}." }
-        format.json { render :show, status: :created, location: @membership }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @membership.errors, status: :unprocessable_entity }
       end
     end
   end

@@ -1,9 +1,9 @@
 class User < ApplicationRecord
   include RatingAverage
 
-  has_many :ratings, dependent: destroy
+  has_many :ratings, dependent: :destroy
   has_many :beers, through: :ratings
-  has_many :memberships, dependent: destroy
+  has_many :memberships, dependent: :destroy
   has_many :beer_clubs, through: :memberships
   has_secure_password
 
@@ -26,5 +26,17 @@ class User < ApplicationRecord
     return unless match.nil?
 
     errors.add(:password, " has to contain min. 1 number")
+  end
+
+  def favorite_beer
+    return nil if ratings.empty?   # palautetaan nil, jos reittauksia ei ole
+
+    ratings.order(score: :desc).limit(1).first.beer
+  end
+
+  def favorite_style
+    return nil if ratings.empty?  # palauttaa nil, jos reittauksia ei ole
+
+    ratings.all.first.beer.style
   end
 end
