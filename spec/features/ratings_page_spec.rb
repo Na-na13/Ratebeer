@@ -59,11 +59,7 @@ describe "Rating" do
     rating2 = create_beer_with_rating({ user: user }, 10 )
     visit user_path(user)
     expect(page).to have_content "Pekka has 2 ratings with an average of 15.0"
-    # within(rating2) do
-    #  click_on "delete"
-    # end
-    # within rating2 do
-    #  click_button("delete", :match => :first)
-    # end
+    first(:button, 'delete').click
+    expect(user.ratings.count).to eq(1)
   end
 end

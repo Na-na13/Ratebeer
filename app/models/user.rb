@@ -37,6 +37,10 @@ class User < ApplicationRecord
   def favorite_style
     return nil if ratings.empty?  # palauttaa nil, jos reittauksia ei ole
 
-    ratings.all.first.beer.style
+    average_scores = {}
+    ratings.group_by { |r| r.beer.style }.each do |beer|
+      average_scores[beer[0]] = beer[1].sum(&:score) / beer[1].count.to_f
+    end
+    average_scores.sort_by{ |score| score[1] }.reverse[0][0]
   end
 end

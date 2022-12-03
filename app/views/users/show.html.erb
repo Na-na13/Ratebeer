@@ -9,7 +9,8 @@
     <%if @user.ratings.empty? %>
       <%= "#{@user.username} has not yet rated" %>
     <% else %>
-      <%= "#{@user.username} has #{pluralize(@user.ratings.count, "rating")} with an average of #{@user.average_rating}"%>
+      <%= "#{@user.username} has #{pluralize(@user.ratings.count, "rating")} with an average of #{@user.average_rating}"%><br>
+      <%= "#{@user.username}'s favorite beer style is #{@user.favorite_style}"%>
     <%end%>
   </p>
 
