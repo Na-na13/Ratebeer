@@ -43,4 +43,14 @@ class User < ApplicationRecord
     end
     average_scores.sort_by{ |score| score[1] }.reverse[0][0]
   end
+
+  def favorite_brewery
+    return nil if ratings.empty?  # palauttaa nil, jos reittauksia ei ole
+
+    average_scores = {}
+    ratings.group_by { |r| r.beer.brewery }.each do |brewery|
+      average_scores[brewery[0].name] = brewery[1].sum(&:score) / brewery[1].count.to_f
+    end
+    average_scores.sort_by{ |score| score[1] }.reverse[0][0]
+  end
 end
