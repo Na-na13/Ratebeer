@@ -16,8 +16,12 @@
     <% @places.each do |place| %>
       <tr>
         <% Place.rendered_fields.each do |field| %>
+          <% if field == :name %>
+            <td><%= link_to place.send(field), place_path(place.id) %></td>
+          <% end %>
           <td><%= place.send(field) %></td>
         <% end %>
+
       </tr>
     <% end %>
   </table>
