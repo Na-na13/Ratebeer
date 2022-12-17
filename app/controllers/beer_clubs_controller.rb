@@ -9,6 +9,7 @@ class BeerClubsController < ApplicationController
 
   # GET /beer_clubs/1 or /beer_clubs/1.json
   def show
+    @membership = Membership.new
   end
 
   # GET /beer_clubs/new
@@ -57,10 +58,6 @@ class BeerClubsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  #  def join_beer_club
-  #
-  #  end
 
   private
 
