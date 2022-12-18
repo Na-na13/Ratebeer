@@ -1,7 +1,7 @@
 require 'net/http'
 require 'json'
 
-class BeerWeatherApi
+class BeerweatherApi
   def self.get_weather(city)
     params = {
         :access_key => key,
