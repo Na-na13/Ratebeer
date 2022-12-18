@@ -19,6 +19,7 @@ class BeerWeatherApi
         :wind_dir => api_response['current']['wind_dir']
       }
   end
+
   def self.key
     return nil if Rails.env.test? # testatessa ei apia tarvita, palautetaan nil
     raise 'BEERWEATHER_APIKEY env variable not defined' if ENV['BEERWEATHER_APIKEY'].nil?
