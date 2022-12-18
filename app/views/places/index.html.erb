@@ -7,6 +7,15 @@
 <% end %>
 
 <% if @places %>
+  <% if @weather %>
+    <strong><%="Current beerweather in #{session[:city].titlecase}" %><br></strong>
+    <%= "#{@weather[:temperature]} Celsius" %><br>
+    <% @weather[:icons].each do |icon| %>
+      <img src="<%= icon %>">
+    <% end %><br>
+    <strong><%= "wind" %></strong>
+    <%= "#{@weather[:wind_speed]}, direction: #{@weather[:wind_dir]}"%>
+  <% end %>
   <table>
     <thead>
       <% Place.rendered_fields.each do |field| %>

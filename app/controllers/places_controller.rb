@@ -9,6 +9,7 @@ class PlacesController < ApplicationController
       redirect_to places_path, notice: "No locations in #{params[:city]}"
     else
       session[:city] = params[:city]
+      @weather = BeerWeatherApi.get_weather(params[:city])
       render :index, status: 418
     end
   end
