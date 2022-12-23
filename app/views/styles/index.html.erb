@@ -1,0 +1,10 @@
+<h1>Styles</h1>
+
+<div id="all styles">
+  <ul>
+    <% @styles.each do |style| %>
+      <li><%= link_to style.style_name, style_path(style) %> 
+      </li>
+    <% end %>
+  </ul>
+</div>

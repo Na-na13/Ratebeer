@@ -14,7 +14,7 @@ class BeersController < ApplicationController
   end
 
   # GET /beers/new
-  def new
+  def new    
     @beer = Beer.new
   end
 
@@ -24,6 +24,7 @@ class BeersController < ApplicationController
 
   # POST /beers or /beers.json
   def create
+    binding.pry
     @beer = Beer.new(beer_params)
 
     respond_to do |format|
@@ -32,7 +33,9 @@ class BeersController < ApplicationController
         format.json { render :show, status: :created, location: @beer }
       else
         @breweries = Brewery.all
-        @styles = ["Weizen", "Lager", "Pale ale", "IPA", "Porter", "Lowalcohol"]
+        # @styles = ["Weizen", "Lager", "Pale ale", "IPA", "Porter", "Lowalcohol"]
+        # @styles = Style.pluck(:id)
+        @styles = Style.all
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @beer.errors, status: :unprocessable_entity }
       end
@@ -71,11 +74,15 @@ class BeersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def beer_params
-    params.require(:beer).permit(:name, :style, :brewery_id)
+    params.require(:beer).permit(:name, :style_id, :brewery_id)
   end
 
   def set_breweries_and_styles_for_template
     @breweries = Brewery.all
-    @styles = ["Weizen", "Lager", "Pale ale", "IPA", "Porter", "Lowalcohol"]
+    # @styles = ["Weizen", "Lager", "Pale ale", "IPA", "Porter", "Lowalcohol"]
+    # @styles = Style.pluck(:id)
+    @styles = Style.all
   end
 end
+
+# <%= form.select :style_id, options_for_select(@styles, selected: @beer.style_id) %>

@@ -1,0 +1,22 @@
+<div id="style">
+  <p>
+    <strong>Style:</strong>
+  </p>
+
+    <p>
+    <strong>Description:</strong>
+    <%= @style.description %>
+    </p>
+
+    <p>
+    <strong>Beers:</strong>
+    <%beers = Beer.where style_id: @style.id %>
+    <ul>
+        <% beers.each do |beer| %>
+        <li> <%= link_to beer.name, beer %> 
+        </li>
+        <% end %>
+    </ul>
+    </p>
+
+</div>
