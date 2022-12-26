@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_23_142144) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_26_143858) do
   create_table "beer_clubs", force: :cascade do |t|
     t.string "name"
     t.integer "founded"
@@ -24,6 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_23_142144) do
     t.integer "brewery_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "old_style"
     t.integer "style_id"
     t.index ["style_id"], name: "index_beers_on_style_id"
   end
@@ -51,7 +52,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_23_142144) do
   end
 
   create_table "styles", force: :cascade do |t|
-    t.string "style_name"
+    t.string "name"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

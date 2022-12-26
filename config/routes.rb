@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :styles
   resources :memberships
   resources :beer_clubs
   resources :users
@@ -16,7 +17,7 @@ Rails.application.routes.draw do
   get 'signin', to: 'sessions#new'
   delete 'signout', to: 'sessions#destroy'
   post 'places', to: 'places#search'
-  get 'styles', to: 'styles#index'
-  get 'styles/:id', to: 'styles#show', as: 'style'
+  # get 'styles', to: 'styles#index'
+  # get 'styles/:id', to: 'styles#show', as: 'style'
 
 end

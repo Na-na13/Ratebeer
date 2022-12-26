@@ -1,22 +1,22 @@
-<div id="style">
-  <p>
-    <strong>Style:</strong>
-  </p>
+<p style="color: green"><%= notice %></p>
 
-    <p>
-    <strong>Description:</strong>
-    <%= @style.description %>
-    </p>
+<%= render @style %>
 
-    <p>
-    <strong>Beers:</strong>
-    <%beers = Beer.where style_id: @style.id %>
-    <ul>
-        <% beers.each do |beer| %>
-        <li> <%= link_to beer.name, beer %> 
+<div id="all styles">
+<strong>Beers:</strong>
+  <ul>
+    <% @beers.each do |beer| %>
+      <% if beer.style == @style %>
+        <li><%= link_to beer.name, beer %> 
         </li>
-        <% end %>
-    </ul>
-    </p>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
 
+<div>
+  <%= link_to "Edit this style", edit_style_path(@style) %> |
+  <%= link_to "Back to styles", styles_path %>
+
+  <%= button_to "Destroy this style", @style, method: :delete %>
 </div>

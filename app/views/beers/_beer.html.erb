@@ -6,13 +6,12 @@
 
   <p>
     <strong>Style:</strong>
-    <%= beer.style.style_name %>
+    <%= link_to beer.style.name, beer.style %>
   </p>
 
   <p>
     <strong>Brewery:</strong>
-    <%brewery = Brewery.find_by id: beer.brewery_id %>
-    <%= brewery.name %>
+    <%= link_to beer.brewery.name, beer.brewery %>
   </p>
   <p>
     <%if beer.ratings.empty? %>
