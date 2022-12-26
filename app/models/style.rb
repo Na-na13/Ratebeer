@@ -1,3 +1,3 @@
 class Style < ApplicationRecord
-    belongs_to :beer
+  has_many :beer
 end

@@ -59,7 +59,7 @@ class MembershipsController < ApplicationController
 
   # DELETE /memberships/1 or /memberships/1.json
   def destroy
-    @beer_club = BeerClub.where(id:@membership.beer_club_id)[0]
+    @beer_club = BeerClub.where(id: @membership.beer_club_id)[0]
     @membership.destroy
 
     respond_to do |format|

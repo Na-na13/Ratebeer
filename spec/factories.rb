@@ -12,13 +12,19 @@ FactoryBot.define do
 
     factory :beer do
         name { "anonymous" }
-        style { "Lager" }
+        # style { "Lager" }
         brewery # olueeseen liittyvä panimo luodaan brewery-tehtaalla
+        style # olueeseen liittyvä tyyli luodaan style-tehtaalla
     end
 
     factory :rating do
         score { 10 }
         beer # reittaukseen liittyvä olut luodaan beer-tehtaalla
         user # reittaukseen liittyvä user luodaan user-tehtaalla
+    end
+
+    factory :style do
+        name { "Lager" }
+        description { "Best Beer!" }
     end
 end

@@ -1,47 +1,54 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/rena/RoR/ratebeer/app/helpers/application_helper.rb": {
+      "/home/rena/RoR/Ratebeer/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/helpers/beer_clubs_helper.rb": {
+      "/home/rena/RoR/Ratebeer/app/helpers/beer_clubs_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/helpers/beers_helper.rb": {
+      "/home/rena/RoR/Ratebeer/app/helpers/beers_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/helpers/breweries_helper.rb": {
+      "/home/rena/RoR/Ratebeer/app/helpers/breweries_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/helpers/memberships_helper.rb": {
+      "/home/rena/RoR/Ratebeer/app/helpers/memberships_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/helpers/users_helper.rb": {
+      "/home/rena/RoR/Ratebeer/app/helpers/styles_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/models/beer.rb": {
+      "/home/rena/RoR/Ratebeer/app/helpers/users_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/rena/RoR/Ratebeer/app/models/beer.rb": {
         "lines": [
           1,
           1,
           null,
+          1,
           1,
           1,
           1,
@@ -63,14 +70,14 @@
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/models/application_record.rb": {
+      "/home/rena/RoR/Ratebeer/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/models/concerns/rating_average.rb": {
+      "/home/rena/RoR/Ratebeer/app/models/concerns/rating_average.rb": {
         "lines": [
           1,
           1,
@@ -85,7 +92,7 @@
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/models/user.rb": {
+      "/home/rena/RoR/Ratebeer/app/models/user.rb": {
         "lines": [
           1,
           1,
@@ -128,9 +135,9 @@
           null,
           6,
           21,
-          8,
+          13,
           null,
-          14,
+          19,
           null,
           null,
           1,
@@ -145,7 +152,7 @@
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/models/brewery.rb": {
+      "/home/rena/RoR/Ratebeer/app/models/brewery.rb": {
         "lines": [
           1,
           1,
@@ -176,7 +183,14 @@
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/controllers/sessions_controller.rb": {
+      "/home/rena/RoR/Ratebeer/app/models/style.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/rena/RoR/Ratebeer/app/controllers/sessions_controller.rb": {
         "lines": [
           1,
           1,
@@ -203,7 +217,7 @@
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/controllers/application_controller.rb": {
+      "/home/rena/RoR/Ratebeer/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -220,7 +234,7 @@
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/controllers/users_controller.rb": {
+      "/home/rena/RoR/Ratebeer/app/controllers/users_controller.rb": {
         "lines": [
           1,
           1,
@@ -296,7 +310,7 @@
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/models/rating.rb": {
+      "/home/rena/RoR/Ratebeer/app/models/rating.rb": {
         "lines": [
           1,
           1,
@@ -312,7 +326,7 @@
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/models/membership.rb": {
+      "/home/rena/RoR/Ratebeer/app/models/membership.rb": {
         "lines": [
           1,
           1,
@@ -320,7 +334,7 @@
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/models/beer_club.rb": {
+      "/home/rena/RoR/Ratebeer/app/models/beer_club.rb": {
         "lines": [
           1,
           1,
@@ -332,7 +346,7 @@
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/controllers/beers_controller.rb": {
+      "/home/rena/RoR/Ratebeer/app/controllers/beers_controller.rb": {
         "lines": [
           1,
           1,
@@ -368,56 +382,62 @@
           1,
           null,
           1,
-          1,
-          2,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          0,
-          null,
           null,
           null,
           1,
           2,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
           null,
           null,
           1,
           2,
+          null,
+          null,
+          1,
           2,
+          null,
+          null,
+          2,
+          null,
+          null,
           null,
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/controllers/breweries_controller.rb": {
+      "/home/rena/RoR/Ratebeer/app/controllers/breweries_controller.rb": {
         "lines": [
           1,
           1,
@@ -493,7 +513,7 @@
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/lib/beermapping_api.rb": {
+      "/home/rena/RoR/Ratebeer/lib/beermapping_api.rb": {
         "lines": [
           1,
           1,
@@ -532,7 +552,7 @@
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/models/place.rb": {
+      "/home/rena/RoR/Ratebeer/app/models/place.rb": {
         "lines": [
           1,
           1,
@@ -541,7 +561,7 @@
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/lib/beerweather_api.rb": {
+      "/home/rena/RoR/Ratebeer/lib/beerweather_api.rb": {
         "lines": [
           1,
           1,
@@ -568,12 +588,13 @@
           1,
           0,
           0,
+          null,
           0,
           null,
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/controllers/places_controller.rb": {
+      "/home/rena/RoR/Ratebeer/app/controllers/places_controller.rb": {
         "lines": [
           1,
           1,
@@ -600,7 +621,7 @@
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/controllers/ratings_controller.rb": {
+      "/home/rena/RoR/Ratebeer/app/controllers/ratings_controller.rb": {
         "lines": [
           1,
           1,
@@ -632,7 +653,7 @@
           null
         ]
       },
-      "/home/rena/RoR/ratebeer/app/channels/application_cable/channel.rb": {
+      "/home/rena/RoR/Ratebeer/app/channels/application_cable/channel.rb": {
         "lines": [
           0,
           0,
@@ -642,7 +663,7 @@
         "branches": {
         }
       },
-      "/home/rena/RoR/ratebeer/app/channels/application_cable/connection.rb": {
+      "/home/rena/RoR/Ratebeer/app/channels/application_cable/connection.rb": {
         "lines": [
           0,
           0,
@@ -652,7 +673,7 @@
         "branches": {
         }
       },
-      "/home/rena/RoR/ratebeer/app/controllers/beer_clubs_controller.rb": {
+      "/home/rena/RoR/Ratebeer/app/controllers/beer_clubs_controller.rb": {
         "lines": [
           0,
           0,
@@ -720,95 +741,6 @@
           null,
           0,
           0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/rena/RoR/ratebeer/app/controllers/memberships_controller.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
           0,
           null,
           null,
@@ -820,7 +752,174 @@
         "branches": {
         }
       },
-      "/home/rena/RoR/ratebeer/app/jobs/application_job.rb": {
+      "/home/rena/RoR/Ratebeer/app/controllers/memberships_controller.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/rena/RoR/Ratebeer/app/controllers/styles_controller.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/rena/RoR/Ratebeer/app/jobs/application_job.rb": {
         "lines": [
           0,
           null,
@@ -833,7 +932,7 @@
         "branches": {
         }
       },
-      "/home/rena/RoR/ratebeer/app/mailers/application_mailer.rb": {
+      "/home/rena/RoR/Ratebeer/app/mailers/application_mailer.rb": {
         "lines": [
           0,
           0,
@@ -844,6 +943,6 @@
         }
       }
     },
-    "timestamp": 1671382648
+    "timestamp": 1672084127
   }
 }
