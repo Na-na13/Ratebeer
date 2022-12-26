@@ -9,7 +9,7 @@
         <% end %>
     </ul>
 </div>
-<%=link_to "Rate a beer", new_rating_path%>
+<%=link_to "Rate a beer", new_rating_path, class: "btn btn-primary"%>
 <ul>
   <% @ratings.each do |rating| %>
     <li> <%= render rating %> <%= link_to rating.user.username, rating.user %> </li>
