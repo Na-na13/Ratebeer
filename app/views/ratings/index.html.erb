@@ -1,17 +1,22 @@
 <h2>List of ratings</h2>
 
-<p>Number of ratings: <%= @ratings.count%></p>
+<p><strong>Number of ratings: </strong><%= @ratings.count%></p>
 
 <div id="ratings">
-    <ul>
-        <% @ratings.each do |rating| %>
-            <li> <%= render rating %> </li>
-        <% end %>
-    </ul>
+  <table class="table table-hover">
+    <thead>
+      <th><%= "Beer" %></th>
+      <th><%= "Score" %></th>
+      <th><%= "Rater" %></th>
+    </thead>
+    <% @ratings.each do |rating| %>
+      <tr>
+        <td><%= link_to rating.beer.name, rating.beer %></td> 
+        <td><%= rating.score %></td>
+        <td><%= link_to rating.user.username, rating.user %></td>
+      </tr>
+    <% end %>
+  </table>
 </div>
-<%=link_to "Rate a beer", new_rating_path, class: "btn btn-primary"%>
-<ul>
-  <% @ratings.each do |rating| %>
-    <li> <%= render rating %> <%= link_to rating.user.username, rating.user %> </li>
-  <% end %>
-</ul>
+
+<%= link_to "Rate a Beer", new_rating_path, class: "btn btn-primary" if current_user%><br>

@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="mb-3">
+    <%= form.label :name, style: "display: block", class:"form-label" %>
+    <%= form.text_field :name, class:"form-control", id:"exampleFormControlInput1", placeholder:"Brewery name" %>
   </div>
 
-  <div>
-    <%= form.label :year, style: "display: block" %>
-    <%= form.number_field :year %>
+  <div class="mb-3">
+    <%= form.label :year, style: "display: block", class:"form-label" %>
+    <%= form.number_field :year, class:"form-control", id:"exampleFormControlInput1", placeholder:"Year of foundation" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+   <div class="col-12">
+    <%= form.button "Create Brewery", class: "btn btn-primary", type: "submit" %>
   </div>
 <% end %>

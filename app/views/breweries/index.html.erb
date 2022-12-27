@@ -1,21 +1,22 @@
 <h1>Breweries</h1>
 
-<p>Number of breweries: <%= @breweries.count %></p>
+<p><strong>Number of breweries: </strong><%= @breweries.count %></p>
 
 <div id="breweries">
-  <% @breweries.each do |brewery| %>
-    <div id="<%= dom_id brewery %>">
-      <p>
-        <%= link_to brewery.name, brewery %>
-      </p>
-    
-      <p>
-        <strong>Year:</strong>
-        <%= brewery.year %>
-      </p>
-    
-    </div>
-  <% end %>
+  <table class="table table-hover">
+    <thead>
+      <th><%= "Brewery" %></th>
+      <th><%= "Founded" %></th>
+      <th><%= "Beers" %></th>
+    </thead>
+    <% @breweries.each do |brewery| %>
+      <tr>
+        <td><%= link_to brewery.name, brewery %></td>
+        <td><%= brewery.year %></td>
+        <td><%= brewery.beers.count %>
+      </tr>
+    <% end %>
+  </table>
 </div>
 <%= link_to "List of Beers", beers_path %><br>
 <%= link_to "New brewery", new_brewery_path, class: "btn btn-primary" if current_user%><br>
