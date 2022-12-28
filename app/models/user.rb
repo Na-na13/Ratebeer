@@ -53,4 +53,14 @@ class User < ApplicationRecord
     end
     average_scores.sort_by{ |score| score[1] }.reverse[0][0]
   end
+
+  def self.top(n)
+    ratings_by_user = {}
+    User.all.each do |user|
+      if user.ratings.any?
+        ratings_by_user[user.username] = user.ratings.count
+      end
+    end
+    ratings_by_user.sort_by{ |hash| hash[1] }.reverse.first(n)
+  end
 end

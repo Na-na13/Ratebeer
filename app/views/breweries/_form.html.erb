@@ -21,6 +21,11 @@
     <%= form.number_field :year, class:"form-control", id:"exampleFormControlInput1", placeholder:"Year of foundation" %>
   </div>
 
+  <div>
+    <%= form.label :active, style: "display: block" %>
+    <%= form.check_box :active %>
+  </div>
+
    <div class="col-12">
     <%= form.button "Create Brewery", class: "btn btn-primary", type: "submit" %>
   </div>

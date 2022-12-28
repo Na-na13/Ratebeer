@@ -1,6 +1,8 @@
 <h1>Breweries</h1>
 
-<p><strong>Number of breweries: </strong><%= @breweries.count %></p>
+<h2>Active</h2>
+
+<p><strong>Number of active breweries: </strong><%= @active_breweries.count %></p>
 
 <div id="breweries">
   <table class="table table-hover">
@@ -9,7 +11,28 @@
       <th><%= "Founded" %></th>
       <th><%= "Beers" %></th>
     </thead>
-    <% @breweries.each do |brewery| %>
+    <% @active_breweries.each do |brewery| %>
+      <tr>
+        <td><%= link_to brewery.name, brewery %></td>
+        <td><%= brewery.year %></td>
+        <td><%= brewery.beers.count %>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<h2>Retired</h2>
+
+<p><strong>Number of retired breweries: </strong><%= @retired_breweries.count %></p>
+
+<div id="retired-breweries">
+  <table class="table table-hover">
+    <thead>
+      <th><%= "Brewery" %></th>
+      <th><%= "Founded" %></th>
+      <th><%= "Beers" %></th>
+    </thead>
+    <% @retired_breweries.each do |brewery| %>
       <tr>
         <td><%= link_to brewery.name, brewery %></td>
         <td><%= brewery.year %></td>
