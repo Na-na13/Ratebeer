@@ -21,8 +21,8 @@ class Beer < ApplicationRecord
     errors.add(:brewery, "has to exist")
   end
 
-  def self.top(n)
-    sorted_by_rating_in_desc_order = Beer.all.sort_by{|b| b.average_rating}.reverse
-    sorted_by_rating_in_desc_order[0..2]
+  def self.top(int)
+    sorted_by_rating_in_desc_order = Beer.all.sort_by(&:average_rating).reverse
+    sorted_by_rating_in_desc_order[0..(int - 1)]
   end
 end

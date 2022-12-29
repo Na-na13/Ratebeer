@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
+  before_action :ensure_that_signed_in, only: [:toggle_status]
+  before_action :ensure_that_user_is_admin, only: [:toggle_status]
 
   # GET /users or /users.json
   def index
@@ -56,6 +58,15 @@ class UsersController < ApplicationController
     @user.destroy
     session[:user_id] = nil
     redirect_to :root
+  end
+
+  def toggle_status
+    user = User.find(params[:id])
+    user.update_attribute :closed, !user.closed
+
+    new_status = user.closed? ? "closed" : "active"
+
+    redirect_to user, notice: "user #{user.username} status changed to #{new_status}"
   end
 
   private

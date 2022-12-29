@@ -25,17 +25,12 @@ describe "Rating" do
     expect(beer1.average_rating).to eq(15.0)
   end
 
-  it "page shows all ratings and amount of all ratings" do
+  it "page shows recent ratings" do
     FactoryBot.create(:rating, beer: beer2, score: 10, user: user)
-    visit ratings_path
-
-    expect(page).to have_content "Number of ratings: 1"
-    expect(page).to have_content "Karhu 10"
-
     FactoryBot.create(:rating, beer: beer1, score: 20, user: user)
     visit ratings_path
 
-    expect(page).to have_content "Number of ratings: 2"
+    expect(page).to have_content "Karhu 10"
     expect(page).to have_content "iso 3 20"
   end
 

@@ -2,12 +2,15 @@
   <p>
     <strong>Username:</strong>
     <%= @user.username %>
+    <% if current_user and current_user.admin and @user.closed %>
+      <span class="badge bg-primary">Closed</span>
+    <% end %>
   </p>
-  <p>
+    
     <%if @user.ratings.empty? %>
       <%= "#{@user.username} has not yet rated" %>
     <% else %>
-      <%= "#{@user.username} has #{pluralize(@user.ratings.count, "rating")} with an average of #{@user.average_rating}"%><br>
+      <%= "#{@user.username} has #{pluralize(@user.ratings.count, "rating")} with an average of #{round(@user.average_rating)}"%><br>
       <%= "#{@user.username}'s favorite beer style is #{@user.favorite_style.name}" %><br>
       <%= "#{@user.username}'s favorite brewery is #{@user.favorite_brewery}" %>
     <%end%>
@@ -39,11 +42,15 @@
   </ul>
 
 </div>
+<div>
+  <% if current_user and current_user.admin %>
+    <%= change_status_button(@user) %>
+  <% end %>
+</div>
 
 <div>
-  <%= link_to "Back to users", users_path %>
   <% if @user == current_user %>
-    | <%= link_to "Edit this user", edit_user_path(@user) %>
-    <%= button_to "Destroy this user", @user, method: :delete, class: "btn btn-danger" %>
+    <%= edit_and_destroy_buttons(@user) %><br>
   <% end %>
+  <%= link_to "Back to users", users_path %>
 </div>

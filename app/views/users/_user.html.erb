@@ -2,6 +2,9 @@
   <p>
     <strong>Username:</strong>
     <%= user.username %>
+    <% if current_user and current_user.admin and user.closed %>
+      <span class="badge bg-primary">Closed</span>
+    <% end %>
   </p>
 
 </div>
