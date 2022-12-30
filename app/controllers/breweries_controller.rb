@@ -7,6 +7,20 @@ class BreweriesController < ApplicationController
     # @breweries = Brewery.all.order(:name)
     @active_breweries = Brewery.active.order(:name)
     @retired_breweries = Brewery.retired.order(:name)
+
+    order = params[:order] || 'name'
+
+    @active_breweries = case order
+             when "name" then @active_breweries.sort_by(&:name)
+             when "year" then @active_breweries.sort_by(&:year)
+             when "beers" then @active_breweries.sort_by { |b| b.beers.count }
+             end
+    
+    @retired_breweries = case order
+             when "name" then @retired_breweries.sort_by(&:name)
+             when "year" then @retired_breweries.sort_by(&:year)
+             when "beers" then @retired_breweries.sort_by { |b| b.beers.count }
+             end
   end
 
   # GET /breweries/1 or /breweries/1.json

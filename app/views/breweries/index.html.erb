@@ -7,9 +7,11 @@
 <div id="breweries">
   <table class="table table-hover">
     <thead>
-      <th><%= "Brewery" %></th>
-      <th><%= "Founded" %></th>
-      <th><%= "Beers" %></th>
+      <tr>
+        <th><%= link_to "Brewery", breweries_path(order: "name")%></th>
+        <th><%= link_to "Founded", breweries_path(order: "year")%></th>
+        <th><%= link_to "Beers", breweries_path(order: "beers")%></th>
+      </tr>
     </thead>
     <% @active_breweries.each do |brewery| %>
       <tr>
@@ -28,9 +30,11 @@
 <div id="retired-breweries">
   <table class="table table-hover">
     <thead>
-      <th><%= "Brewery" %></th>
-      <th><%= "Founded" %></th>
-      <th><%= "Beers" %></th>
+      <tr>
+        <th><%= link_to "Brewery", breweries_path(order: "name")%></th>
+        <th><%= link_to "Founded", breweries_path(order: "year")%></th>
+        <th><%= link_to "Beers", breweries_path(order: "beers")%></th>
+      </tr>
     </thead>
     <% @retired_breweries.each do |brewery| %>
       <tr>
